@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>contact us</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+    <body>
+        <section>
+            <div class="col-lg-6 col-md-6 col-12">
+                <img src="static/ct.jpg"></div>
+            <div id="contact" class="container-fluid bg-grey pt-4 pb-4" id="contact">
+      <h2 class="text-center pb-4">CONTACT</h2>
+      <div class="row">
+        <div class="col-sm-5">
+          <p><span class="glyphicon glyphicon-map-marker"></span> New delhi </p>
+          <p><span class="glyphicon glyphicon-phone"></span>  +9188899550</p>
+          <p><span class="glyphicon glyphicon-envelope"></span>   xyz@gamil.com</p>
+        </div>
+        <div class="col-sm-7 slideanim">
+        <form method="post" action="/contactus">
+        {% csrf_token %}
+          <div class="row">
+            <div class="col-sm-6 form-group">
+              <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+            </div>
+            <div class="col-sm-6 form-group">
+              <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+            </div>
+          </div>
+          <textarea class="form-control" id="comments" name="comment" placeholder="Comment" rows="5"></textarea><br>
+          <div class="row">
+            <div class="col-sm-12 form-group">
+              <button class="btn btn-default pull-right bg-dark text-white" type="submit">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></form>
+        </section><hr>
+    </body>
+    </html>

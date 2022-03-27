@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>
+          Appointment form  
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <style>
+            .div-5{
+                margin: 8px;
+            }
+            
+            .div-1{
+                border: 2px;
+                background-color: whitesmoke;
+                font-family: sans-serif;
+            }
+            #submitMsg{
+                color: green;
+            }
+            
+            .div-2{
+                background-color: black;
+                color: white;
+                
+            }
+            .center {
+            margin: auto;
+            width: 60%;
+            border: 5px solid black;
+            padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="center">
+            <div class="div-1">
+                <form method="post" action="/appointment">
+                {%csrf_token%}
+              <div class="div-2"><b><center>APPOINTMENT FORM</center></b><br><hr></div><br>
+            <div class="div-5">
+            First name: <br>            
+<input type="text" name="firstname" placeholder="Enter your first name"/> <br> <br>    
+Last name: <br>
+<input type="text" name="lastname" placeholder="Enter your Last name"/> <br> <br>   
+Gender :  
+</label><br>  
+<input type="radio" name="gender" value="male"/> Male <br>  
+<input type="radio" name="gender" value="female"/> Female <br>  
+<input type="radio" name="gender" value="other"/> Other  
+<br>  
+<br>     
+<div class=" div-3 two-cols">
+Phone number:
+<label>
+    <input type="tel" id="phone" name="phone"/></label>
+Email:
+<label>
+    <input type="email" id="email" name="email" placeholder="Enter your Email"/> <br>  </label>  
+<br> <br>   </div> 
+Appointment request:<br><br>
+    <div class=" div-4 two-cols">
+        Datum:
+        <input type="date" name="date" required>
+          <input type="checkbox" name="checkbox" value="morning">
+          Morning
+          <input type="checkbox" name="checkbox" value="afternoon">
+          Afternoon
+      </div>
+    <p>Confirmation requested by:</p>
+    <div class="inline">
+      <label>
+        <input type="radio" name="mail" value="email" checked>
+        Email
+      </label>
+      <label>
+        <input type="radio" name="mail" value="phone">
+        Phone call
+      </label>
+    </div><br>
+  <div class="btns">
+    <input type="text" name="_gotcha" value="" style="display:none;">
+    <input type="submit" value="Submit request">
+  </div> </div>
+            </form></div>
+</section>
+    </body>
+</html>
